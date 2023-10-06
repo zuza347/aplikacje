@@ -1,0 +1,16 @@
+<script>
+
+ function pokazHaslo() {
+            var haslo = document.getElementById("haslo").value;
+            document.getElementById("podglad").textContent = haslo;
+        }
+</script>
+<form >
+<fieldset style="width:300px">
+    <legend>Formulary:</legend>
+    <label for="fname">Login:</label><br>
+    <input type="text" id="login" name="login" required><br>
+    <label for="lname">Password:</label><br>
+    <input type="password" id="password" name="password" required><input type="button" value="Podgląd hasła" onclick="pokazHaslo()"><br>
+    <label for="email"><b>email</b></label><br>
+    <input type="email" id="email" name="email" pattern="/[\w-\.]+@([A-z0-9-]+\.)[A-z]+/" required><br><br>

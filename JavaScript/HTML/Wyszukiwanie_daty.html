@@ -1,0 +1,8 @@
+<h3> wyszukiwanie daty</h3>
+<script>
+    let text="sucha beskidzka, 10.11.2022r";
+    var reg_date=/([0123 ]?\d)[- \.\/]([01]?\d)[- \.\/](\d{4})/;
+    var position=text.search(reg_date);
+    document.write("date znaleziono na pozycji:"+position+"<br>");
+    document.write(text.slice ([position]))
+</script>

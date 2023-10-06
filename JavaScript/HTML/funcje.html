@@ -1,0 +1,69 @@
+<h1>FORMULARZ</h1>
+<script>
+  function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var email = document.getElementById("email").value;
+      var website = document.getElementById("website").value;
+      var vehicleType = document.getElementById("vehicleType").value;
+
+
+     
+      var passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+      if (!password.match(passwordRegex)) {
+        alert("Hasło musi mieć co najmniej 8 znaków, zawierać dużą literę, cyfrę oraz znak specjalny.");
+        return false;
+      }
+
+
+     
+      if (password !== confirmPassword) {
+        alert("Hasła nie pasują do siebie.");
+        return false;
+      }
+
+
+     
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.match(emailRegex)) {
+        alert("Podaj poprawny adres email.");
+        return false;
+      }
+
+
+     
+      var websiteRegex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-zA-Z0-9]+([-.]{1}[a-zA-Z0-9]+)*\.[a-zA-Z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+      if (!website.match(websiteRegex)) {
+        alert("Podaj poprawny adres strony www.");
+        return false;
+      }
+    }
+</script>
+<form onsubmit="return validateForm()">
+<fieldset style="width:300px">
+    <legend>Personal information</legend>
+    <label for="fname">Login:</label><br>
+  <input type="text" id="login" name="login" required><br>
+    <label for="lname">Password:</label><br>
+  <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,.<>/?]).{8,}$" required><br>
+    <label for="email"><b>email</b></label><br>
+    <input type="email" id="email" name="email" required><br><br>
+   
+    <p>Płeć:</p>
+    <input type="radio" name="plec" value="Male">Male<br>
+    <input type="radio" name="plec" value="Female">Female<br>
+    <input type="radio" name="plec" value="Other">Other<br>
+   
+    <p><b>Select car:</b></p>
+    <select name="Select Car" multiple size="3">
+  <option selected>Volvo</option>
+  <option>Saab</option>
+    <option>Fiat</option></select><br>
+   
+    <p><b>Select option:</b></p>
+    <input type="checkbox" name="pojazd" value="Bike">I have a bike<br>
+    <input type="checkbox" name="pojazd" value="Car">I have a car<br><br>
+   
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset"><br><br>
+</fieldset>

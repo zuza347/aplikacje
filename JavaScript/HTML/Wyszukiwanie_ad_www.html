@@ -1,0 +1,12 @@
+<body>
+    <h1>Wyszukiwanie adresów www</h1>
+    <p>strona:www.zsgsucha.pl</p>
+</body>
+<script>
+    var strona="strona www.zsgsucha.pl";
+    console.log(strona);
+    let wzorzec=/(\bwww\.)|(\bhttps?:\/\/)\S*/;
+    var pozycja=strona.search(wzorzec);
+    document.write(pozycja+"<br>");
+    document.write(strona.slice(pozycja));
+</script>

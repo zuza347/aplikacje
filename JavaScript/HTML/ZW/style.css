@@ -1,0 +1,133 @@
+body{
+background-color: #191d21;
+font-family: 'Open Sans', sans-serif;
+font-size: 20px;
+color: #efefef;
+}
+
+.container{
+margin-left: auto;
+margin-right: auto;
+width: 1000px;
+text-align: center;
+padding: 0;
+margin-bottom: 25px;
+}
+
+.zdj{
+
+display: inline-block;
+width: 420px;
+text-align: center;
+padding: 5px;
+}
+
+.zdj p{
+
+padding: 5px;
+margin-top: 10px;
+text-transform: uppercase;
+letter-spacing: 5px;
+}
+
+#h{
+
+font-size: 32px;
+
+font-weight: 400;
+color: #b1b3b4;
+margin-top: 45px;
+margin-bottom: 30px;
+letter-spacing: 10px;
+text-transform: uppercase;
+text-shadow: white;
+}
+
+.img1{
+width: 450px;
+transition: all 0.2s ease;}
+
+.img1:hover{
+
+transform: scale(0.9);
+}
+.img3:hover{
+
+transform: scale(0.9) rotate(5deg);
+}
+
+
+.img2{
+
+width: 450px;
+transition: transform.2s ease-in-out;
+}
+
+.img2:hover{ 
+    transform: scale(0.95) rotate(5deg);
+}
+
+.img3{
+width: 450px;
+}
+
+.overlay{
+position: relative;
+width: 450px;
+height: 278px;
+}
+
+.overlay .link{
+position: absolute;
+display: block;
+width: 450px;
+height: 65px;
+background-color: #111;
+left: 0px;
+bottom: 0px;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+color: yellow
+}
+
+.overlay:hover .link{
+opacity: 0.8;
+}
+
+.img4{
+width: 450px;
+height: 278px;
+overflow: hidden;
+}
+
+.img4 img
+{
+
+transition: all 0.7s ease-in-out;}
+
+.img4:hover img
+{
+
+transform: scale(1.2) rotate(-5deg);
+}
+ul{
+    font-size: 80%;
+}
+h1{
+
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    color: #454647;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+
+    }
+    #w{
+        float: right;
+        width: 600px;
+        height: 400px;
+
+    }

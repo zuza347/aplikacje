@@ -1,0 +1,14 @@
+<canvas width="400"height="200" id="canvas"></canvas>
+<script>
+    const canvas=document.querySelector("#canvas");
+    const ctx=canvas.getContext("2d");
+    
+    ctx.shadowOffsetX=2;
+    ctx.shadowOffsetY=2;
+    ctx.shadowBlur=2;
+    ctx.shadowColor="rgba(0,0,0,0.5)";
+    ctx.font="50px Times New Roman";
+    ctx.fillStyle="black";
+    ctx.strokeText("Sample String",5,60)
+    
+</script>

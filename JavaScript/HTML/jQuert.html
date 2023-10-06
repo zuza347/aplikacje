@@ -1,0 +1,24 @@
+<h1>jQuery- hide()/show()</h1>
+<h2>wskaż akapit</h2>
+
+<p> to jest zwykły akapit</p>
+<button id="hide">Ukryj</button>
+<button id="show">pokarz</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(function(){
+        $("#hide").click(
+                    function(){
+                    $("p").hide();
+            
+                    }),
+                      $("#show").click(
+                    function(){
+                    $("p").show();
+            
+                    }),
+                    }            
+                      )
+    })
+</script>

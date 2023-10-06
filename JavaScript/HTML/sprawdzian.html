@@ -1,0 +1,130 @@
+<html>
+<head>
+    <title>Formularz rejestracji</title>
+    <script>
+        function sprawdzHaslo() {
+            var haslo = document.getElementById("haslo").value;
+            var duzaLitera = /[A-Z]/;
+            var cyfra = /[0-9]/;
+            var znakSpecjalny = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/;
+
+
+            if (haslo.length < 8 || !duzaLitera.test(haslo) || !cyfra.test(haslo) || !znakSpecjalny.test(haslo)) {
+                alert("Hasło musi mieć co najmniej 8 znaków, zawierać dużą literę, cyfrę i znak specjalny.");
+                return false;
+            }
+
+
+            return true;
+        }
+
+
+        function pokazHaslo() {
+            var haslo = document.getElementById("haslo").value;
+            document.getElementById("podglad").textContent = haslo;
+        }
+
+
+        function sprawdzEmail() {
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (!emailRegex.test(email)) {
+                alert("Podaj poprawny adres email.");
+                return false;
+            }
+
+
+            return true;
+        }
+
+
+        function sprawdzWWW() {
+            var www = document.getElementById("www").value;
+            var wwwRegex = /^(http|https):\/\/[^ "]+$/;
+
+
+            if (!wwwRegex.test(www)) {
+                alert("Podaj poprawny adres strony WWW.");
+                return false;
+            }
+
+
+            return true;
+        }
+
+
+        function sprawdzMarka() {
+            var marka = document.getElementById("marka").value;
+
+
+            if (marka !== "") {
+                document.getElementById("modelDiv").style.display = "block";
+            } else {
+                document.getElementById("modelDiv").style.display = "none";
+            }
+        }
+
+
+        function resetujFormularz() {
+            document.getElementById("rejestracjaForm").reset();
+            document.getElementById("podglad").textContent = "";
+            document.getElementById("modelDiv").style.display = "none";
+        }
+    </script>
+</head>
+
+    <form id="rejestracjaForm" onsubmit="return sprawdzHaslo() && sprawdzEmail() && sprawdzWWW()">
+        <fieldset style="width:300px">
+            <legend>Formulary:</legend>
+        <label for="login">Login:</label><br>
+        <input type="text" id="login" name="login" required>
+        <br>
+        <label for="haslo">Password:</label><br>
+        <input type="password" id="haslo" name="haslo" required>
+        
+        <input type="button" value="Wyświetl hasło" onclick="pokazHaslo()">
+        <span id="podglad"></span>
+        <br>
+            <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="www">www</label><br>
+        <input type="text" id="www" name="www" required>
+        <br>
+        <label for="plec">Płeć:</label><br>
+        <input type="radio" id="female" name="plec" value="female" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="plec" value="female" required>
+        <label for="female">Felmale</label><br>
+        <input type="radio" id="female" name="plec" value="female" required>
+        <label for="female">Other</label><br>
+        <br>
+        <label for="marka">Select car:</label><br>
+        <select id="marka" name="marka" onchange="sprawdzMarka()">
+            <option value="">Wybierz markę</option>
+            <option value="bmw">fiat</option>
+            <option value="volvo">Volvo</option>
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+            
+        </select>
+        <br>
+        <div id="modelDiv" style="display: none;">
+            <label for="model">Model samochodu:</label>
+            <input type="text" id="model" name="model">
+        </div>
+        <br>
+        <label for="plec">Select option</label><br>
+        <input type="radio" name="pojazd" value="bike" required>
+        <label for="male">I have a bike</label><br>
+        <input type="radio" name="pojazd" value="car" required>
+        <label for="male">I have a car</label><br>
+        
+        <br>
+        <input type="submit" value="Send">
+        <input type="button" value="Reset" onclick="resetujFormularz()">
+    </form>
+
+</html>

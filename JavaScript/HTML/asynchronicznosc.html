@@ -1,0 +1,10 @@
+<h1> Asynchroniczność</h1>
+<h2> funkcja clearTimeout()-zatrzymuje uruchomioną funkcje</h2>
+<script>
+    function time(){
+        console.log("to działa po 10 sekundach");
+}
+    let funkcja=setTimeout(time,10000);
+    console.log("funkcja uruchomiona");
+    //clearTimeout(funkcja);
+</script>

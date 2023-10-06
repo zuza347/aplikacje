@@ -1,0 +1,17 @@
+<h1>jQuery-attr()-pobieranie i zmiana wartości atrybutu</h1>
+
+<a href="https://www.w3schools.com"id="w3s">w3schools.com</a>
+<button id="test">odczytaj wartość atrybutu i zmień</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+ $(function(){
+    $("#test").click(function(){
+       alert( $("#w3s").attr("href"));
+        $("#w3s").attr("href","https://onet.pl");
+         $("#w3s").html("https://onet.pl");
+    });
+ });
+    
+    </script>

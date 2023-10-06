@@ -1,0 +1,10 @@
+<h1>Dziedziczenie </h1>
+<script>
+    class DateFormatter extends Date{
+        getFormattedDate(){
+            const months=['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
+            return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+        }
+    }
+    console.log(new DateFormatter().getFormattedDate());
+</script>

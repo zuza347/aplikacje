@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<h1>przepisy</h1>
+<div><img src="szarlotka.jpg"width="200px"text-align="center" >
+    
+</div>
+<button>zobacz przepis</button>
+<a class="link" href="piernik.html"> 
+            <p>inne ciasta</p></a>
+<style>
+   
+  .transform{
+        transform: scale(0.5);
+      
+        
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('button').click(function(){
+            $("div").addClass("transform")
+        });
+    });
+    $(function(){
+        $('button').click(function(){
+            $("div").before("<p>tu jest przepis</p> ")
+        });
+    });
+
+    
+</script>

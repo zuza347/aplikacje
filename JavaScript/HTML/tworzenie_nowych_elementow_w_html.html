@@ -1,0 +1,18 @@
+<h2>zamiana elementów</h2>
+<div id="div1">
+    <p id="p1">pierwszy akapit</p>
+    <p id="p2">drugi akapit</p>
+</div>
+
+<script>
+    let nowy=document.createElement("p");
+    let zawartosc=document.createTextNode("nowy element");
+    nowy.appendChild(zawartosc);
+    let parent=document.querySelector("#div1");
+    let child=document.querySelector("#p1");
+    
+    parent.replaceChild (nowy,child);
+    
+</script>
+
+

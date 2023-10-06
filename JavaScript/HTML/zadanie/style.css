@@ -1,0 +1,16 @@
+h1{
+    color:blue;
+    text-align: center;
+    font-family: times;
+}
+button{
+    background-color: burlywood;
+    color:darkblue;
+    text-align: center;
+}
+body{
+    background-color: bisque;
+}
+a.hover{
+    color:blue
+}

@@ -1,0 +1,10 @@
+<button id=1>wyslij</button>
+
+<script>
+    
+    
+const button=document.querySelectorAll("button");
+    button.forEach(({innerText:text,id})=>{
+        console.log(`Tekst elementu to ${text} a jego id to ${id}`);
+    });
+</script>
