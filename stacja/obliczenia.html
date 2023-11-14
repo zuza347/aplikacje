@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head lang="PL">
+        <meta charset="utf=8">
+        <title>Stacja paliw</title>
+        <link rel="stylesheet" href="styl2.css">
+    </head>
+    <body>
+        <div class="baner">
+            <h1>Całodobowa stacja paliw</h1>
+        </div>
+        <div class="menu">
+            <a href="stacja.html"><img src="home.png"></a>
+            <a href="obliczenia.html"><img src="znak.png"></a>
+            <a href="kwerendy.txt">Pobierz dokumenty</a>
+        </div>
+        <div class="lewy">
+            <h2>Orientacyjny koszt paliwa</h2>
+            <label for="rodzaj">Rodzaj paliwa (1-benzyna, 2-olej napędowy):</label><br>
+            <input id="rodzaj" name="rodzaj" type="number"><br>
+
+            <label for="ile">Ile litrów?</label><br>
+            <input id="ile" name="ile" type="number"><br>
+            <button onclick="obliczcenepaliwa()">OBLICZ</button>
+            <p id="cena"></p>
+            
+
+        </div>
+        <div class="prawy">
+            <img src="samochod.png" alt="samochód" id="samochod">
+        </div>
+        <div class="stopka">
+            <p>Stronę wykonał:00000000000</p>
+        </div>
+        <script>
+            function obliczcenepaliwa() {
+                var rodzaj = document.getElementById('rodzaj').value;
+                rodzaj = parseFloat(rodzaj);
+                var ilosc = document.getElementById('ile').value;
+                ilosc = parseFloat(ilosc);
+                var koszt = 0;
+                switch (rodzaj) {
+                    case 1:
+                        koszt = ilosc * 4;
+                        break;
+    
+                    case 2:
+                        koszt = ilosc * 3.5;
+                        break;
+                    default:
+                        koszt - 0;
+                        break;
+                }
+                document.getElementById('cena').innerHTML = "Koszt paliwa: " + koszt + " zł";
+            }
+        </script>
+   
+    </body>
+</HTML>
