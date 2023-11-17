@@ -1,0 +1,47 @@
+body{
+    font-family:Garamond;
+    text-align: center;
+    margin: 0px;
+    
+    
+}
+#baner,#stopka{
+    background-color: #8C7B75;
+    color:white;
+    height: 70px;
+    font-size: 150%;
+    clear: both;
+    
+    
+    
+    
+}
+#lewy,#prawy{
+    background-color: #BCAAA4;
+    height: 400px;
+    width: 35%;
+    float:left;
+    color:black;
+    
+    
+}
+ol{
+    text-align: left;
+}
+img{
+    border: 1px dashed rgb(#8C7B75);
+    padding: 5px;
+    border-radius: 10%;
+}
+#srodkowy{
+    
+    border: 1px solid rgb( #8C7B75);
+    width: 30%;
+    height: 400px;
+    float: left;
+    color:black;
+    background-color: #EFDCD5;
+}
+h1{
+    background-color: #8C7B75;
+}
