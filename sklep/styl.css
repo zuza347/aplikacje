@@ -22,8 +22,6 @@ body{
     width: 35%;
     float:left;
     color:black;
-    
-    
 }
 ol{
     text-align: left;
@@ -44,4 +42,8 @@ img{
 }
 h1{
     background-color: #8C7B75;
+}
+#cena{
+    
+    border: 1px solid #8C7B75;
 }

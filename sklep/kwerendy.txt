@@ -1,0 +1,4 @@
+SELECT nazwa FROM towary WHERE promocja=1;
+SELECT cena FROM towary WHERE nazwa="Markery 4 szt.";
+
+ALTER TABLE dostawcy ADD COLUMN informacje text;

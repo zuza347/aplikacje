@@ -5,9 +5,9 @@
     <link rel="stylesheet" href=" styl.css">
 </head>
 <body>
-    <div id="baner">
-        <h1>Dzisiejsze promocje naszego sklepu</h1>
-    </baner>
+<div id="baner">
+		<h1>Dzisiejsze promocje naszego sklepu</h1>
+	</div>
     <div id="lewy">
         <h2>Taniej o 30%</h2>
         <?php
@@ -30,33 +30,39 @@
         ?>
     </div>
     <div id="srodkowy">
-        <h2>Sprawdź cenę</h2>
-        <form method="POST">
-            <select name="przybory">
-                <option value="gumka" name='Gumka do mazania'>Gumka do mazania</option>
-                <option value="cienkopis" name="Cienkopis">Cienkopis</option>
-                <option value="Pisaki 60 szt." name="Pisaki 60 szt.">Pisaki 60 szt.</option>
-                <option value="marker" name="Markery 4 szt.">Markery 4 szt.</option>
-            </select>
-           <input type="submit" value="sprawdz">
-          </form>
-          <?php
-          $nazwa=$_POST['przybory'];
-          $sql= "SELECT cena FROM towary WHERE nazwa='$nazwa'";
-            $result=mysqli_fetch_assoc($sql);
-            echo "cena;".$result['cena'];
-            echo $result;
-
-          ?>
-          
-    </div>
+		<h3>Cena wybranego artykułu w promocji</h3>
+		<form action="index.php" method="post">
+			<select name="wybor">
+				<option value="Gumka do mazania">Gumka do mazania</option>
+				<option value="Cienkopis">Cienkopis</option>
+				<option value="Pisaki 60 szt.">Pisaki 60 szt.</option>
+				<option value="Markery 4 szt.">Markery 4 szt.</option>
+			</select>
+			<button type="submit">WYBIERZ</button>
+		</form>
+		<?php
+		    $produkt = $_POST['wybor'];
+			$sql = "SELECT cena FROM towary WHERE nazwa = '$produkt'";
+			$result = mysqli_query($conn, $sql);
+			while($tab = mysqli_fetch_row($result)) {
+                echo"<div id='cena'>";
+                echo "cena regularna: ";
+				$cena = ($tab[0]);
+				echo "$cena"."<br>";
+                echo"cena w promocji 30%:";
+                $promocja=ROUND($tab[0]*0.7,2);
+                echo $promocja;
+                echo"</div>";
+			}
+		mysqli_close($conn);
+		?>
+	</div>
     <div id="prawy">
-        <h2>Kontakt</h2>
-        <p>e-mail:
-            <a href="bok@sklep.pl">bok@sklep.pl</a>
-            <img src="promocja.png" alt="promocja">
+        <h2>Kontakt</h2><br>
+        <p>Email:<a href="bok@sklep.pl">bok@sklep.pl<a></p>
+        <img src="promocja.png" alt="promocja">
 
-        </p>
+        
     </div>
     <div id="stopka">
         <h4>Stronę wykonała: Zuzanna Latoń</h4>
