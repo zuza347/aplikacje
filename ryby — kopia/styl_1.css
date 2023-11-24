@@ -1,0 +1,46 @@
+body{
+    font-family: Helvetica;
+}
+#baner,#stopka{
+    background-color: #00838F;
+    color: white;
+    padding: 5px ;
+    font-size: 130%;
+    text-align: center;
+}
+#lewy1,#lewy2{
+    background-color:#EFEFEF ;
+    width: 55%;
+    float: left;
+    
+}
+#lewy1{
+    height: 150px;
+    float: left;
+
+}
+#lewy2{
+    height: 300px;
+    clear: both;
+    
+}
+#prawy{
+    background-color: #4FB3BF ;
+    width: 45%;
+    height: 450px;
+    text-align: center;
+    float: left;
+    
+}
+img{
+    box-shadow: 10px 10px 7px DimGray;
+    margin: 20px;
+}
+th,tr,td{
+    border: 1px solid #4FB3BF ;
+    
+}
+
+#stopka{
+    clear:both;
+}
