@@ -1,0 +1,26 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#baner1{
+    background-color: #483D8B;
+    height: 150px;
+    width: 30%;
+    float: left;
+}
+#baner2{
+    background-color:#483D8B ;
+    color: white;
+    height: 150px;
+    width: 70%;
+    float: left;
+}
+
+#zadanie{
+    background-color: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    padding: 3px;
+    border: 1px solid;
+    float: left;
+}
+
