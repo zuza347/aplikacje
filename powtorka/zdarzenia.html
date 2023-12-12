@@ -1,0 +1,13 @@
+<h1 onclick="changeText(this)">Kliknij w tekst</h1>
+<h2 ondblclick="changeText(this)">Kliknij w tekst</h2>
+<button id="myButton">Wyslij datę</button>
+<p id="demo"></p>
+<script>
+    function changeText(id) {
+        id.innerHTML="nowy text";
+    }
+    document.querySelector("#myButton").onclick=displayDate;
+    function displayDate(){
+        document.querySelector("#demo").inerHTML=Date();
+    }
+</script>

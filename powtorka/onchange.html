@@ -1,0 +1,16 @@
+<label>wpisz swoje  imie
+    <input type="text" id="fname" onchange="eventOnChange()">
+
+</label><br>
+
+<label>wpisz swój wiek
+    <input type="number" id="age">
+</label>
+<script>
+    function eventOnChange(){
+        let x=document.querySelector("#fname");
+        x.value=x.value.toUpperCase();
+    }
+</script>
+
+
