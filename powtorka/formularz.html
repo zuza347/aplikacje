@@ -1,0 +1,15 @@
+<H1>WALIDACJA FORMULARZY</H1>
+<form>
+    <label for="name">Wprowadz imię:</label>
+    <input type="text" name="name" required><br>
+    <label for="waga">Wprowadź wagę: </label>
+    <input type="number" name="waga" min="1" max="200">
+    <input type="submit" value="wyślij" id="send">
+    <p>*to pole jest wymagane</p>
+</form>
+<script>
+    document.querySelector("#send").addEventListener("click",checkMail);
+    function checkMail(event){
+        let meilText
+    }
+</script>

@@ -1,0 +1,13 @@
+<h1>TWORZENIE ELEMENTÓW</h1>
+<button id="mybutton" onclick="dodaj()">Dodaj akapit</button>
+<div id="div1"></div>
+<script>
+    i=1
+    function dodaj(){
+        let akapit=document.createElement("p");
+        let content=document.createTextNode("nowy akapit "+ i++);
+        akapit.appendChild(content);
+        let position=document.querySelector("#div1");
+        position.appendChild(akapit);
+    }
+</script>

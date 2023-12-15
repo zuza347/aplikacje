@@ -1,0 +1,36 @@
+<p>wyszukiwanie tekstu</p>
+<script>
+    // let tekst = "być albo nie być";
+    // let wzorzec = /być/;
+    // let pozycja = tekst.search(wzorzec);
+    // document.write('wtraz znaleziono na pozycji: '+ pozycja);
+
+    // let tekst = "456234871";
+    // let wzorzec = /\d\d\d\d\d\d\d\d\d/;
+    // let pozycja = tekst.search(wzorzec);
+    // document.write('wtraz znaleziono na pozycji: '+ pozycja);
+    
+    // let tekst = "32-200 sucha beskidzka";
+    // let wzorzec = /\d{2}-\d{3}/;
+    // let pozycja = tekst.search(wzorzec);
+    // document.write('znaleziono kod: '+ tekst.slice(pozycja,pozycja+6));
+
+      
+    // let tekst = "obraz jest w pliku obraz.gif";
+    // let wzorzec = /\S*\.gif/i;
+    // let pozycja = tekst.search(wzorzec);
+    // document.write('znaleziono kod: '+ tekst.slice(pozycja));
+
+      
+    // let tekst = "email: jas.fasola@email.com";
+    // let wzorzec = /[\w_\.-]+@([-A-z0-9]+\.)+[A-z]+/;
+    // let pozycja = tekst.search(wzorzec);
+    // document.write('znaleziono kod: '+ tekst.slice(pozycja));
+
+      
+    let tekst = "Maków 15.12.2023";
+    let wzorzec = /([0123]?\d)[\.-\/]([01]?\d)[\.=\/](\d{4})/;
+    let pozycja = tekst.search(wzorzec);
+    document.write('znaleziono kod: '+ tekst.slice(pozycja));
+    
+</script>
